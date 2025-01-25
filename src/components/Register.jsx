@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
 function Register() {
-  return (
-    <>
-      
-    </>
-  )
+	return (
+		<>
+			<h1 className="my-5 text-center">Register</h1>
+		</>
+	);
 }
 
-export default Register
+export default Register;
