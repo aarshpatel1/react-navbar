@@ -1,18 +1,9 @@
-import React from "react";
-import { Link, Outlet } from "react-router-dom";
 import products from "../data/productsData";
+import { Link, Outlet } from "react-router-dom";
 
-function Products() {
+function ProductSuggestions() {
 	return (
 		<>
-			<h1 className="my-5 text-center">Products</h1>
-			<p className="text-center my-5">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores,
-				dolorem. Placeat laudantium ut consequuntur ullam ipsa excepturi. Dolor
-				obcaecati ducimus beatae expedita molestias debitis natus doloremque
-				consequuntur explicabo, accusamus maiores!
-			</p>
-
 			<div className="row row-cols-1 row-cols-md-4 gx-4 gy-0">
 				{products.map((product) => (
 					<div key={product.id} className="col pb-5">
@@ -36,16 +27,16 @@ function Products() {
 										View details
 									</button>
 								</Link>
-								<button className="btn btn-secondary">Add to cart</button>
+								<Link to={`/payment/${product.id}`} className="btn btn-secondary">Add to cart</Link>
 							</div>
 						</div>
 					</div>
 				))}
 			</div>
 
-			<Outlet />
+			{/* <Outlet /> */}
 		</>
 	);
 }
 
-export default Products;
+export default ProductSuggestions;

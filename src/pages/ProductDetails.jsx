@@ -1,6 +1,6 @@
-import React from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import products from "../data/productsData";
+import ProductSuggestions from "../components/ProductSuggestions";
 
 function ProductDetails() {
 	const { productId } = useParams();
@@ -10,7 +10,7 @@ function ProductDetails() {
 
 	return (
 		<>
-			<div className="my-5 shadow">
+			<div className="my-5">
 				<div className="row" style={{ height: "400px" }}>
 					<div className="col-md-6 d-flex justify-content-center align-items-center">
 						<img
@@ -33,11 +33,14 @@ function ProductDetails() {
 							>
 								Go Back
 							</button>
-							<button className="btn btn-success">Add to Cart</button>
+							<Link to={`/payment/${product.id}`} className="btn btn-success">Add to Cart</Link>
 						</div>
 					</div>
 				</div>
 			</div>
+
+			<h2 className="my-5 text-center pt-5">You may also like</h2>
+			<ProductSuggestions />
 		</>
 	);
 }
