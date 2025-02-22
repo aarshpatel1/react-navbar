@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ProductSuggestions from "../components/ProductSuggestions";
 
 function Products() {
@@ -12,6 +13,10 @@ function Products() {
 			</p>
 
 			<ProductSuggestions />
+
+			<Link to={"/add-product"} className="btn btn-outline-secondary float-end">
+				Add Product
+			</Link>
 		</>
 	);
 }

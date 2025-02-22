@@ -8,6 +8,7 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import ProductDetails from "./pages/ProductDetails";
 import PaymentGateway from "./pages/PaymentGateway";
+import AddProduct from "./pages/AddProduct";
 
 function App() {
 	return (
@@ -23,6 +24,7 @@ function App() {
 					<Route path="/login" element={<Login />} />
 					<Route path="/payment" element={<PaymentGateway />} />
 					<Route path="/payment/:productId" element={<PaymentGateway />} />
+					<Route path="/add-product" element={<AddProduct />} />
 				</Routes>
 			</div>
 		</BrowserRouter>
